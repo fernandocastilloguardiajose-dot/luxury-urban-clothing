@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #D4AF37;
+  --color-gold-dark: #AA8A2E;
+  --color-zinc-950: #09090b;
+  
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Bebas Neue', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-wider uppercase;
+  }
+}
+
+.gold-gradient {
+  @apply bg-linear-to-r from-gold via-gold-dark to-gold bg-clip-text text-transparent;
+}
+
+.btn-primary {
+  @apply bg-gold text-black font-display px-8 py-3 tracking-widest hover:bg-white transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply border border-white/20 hover:border-gold hover:text-gold px-8 py-3 font-display tracking-widest transition-all duration-300;
+}
